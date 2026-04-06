@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>RNA-Seq DEG Visualization Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdfdfd;
+      margin: 0;
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .card {
+      max-width: 900px;
+      width: 100%;
+      background: white;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border: 1px solid #eee;
+    }
+    h1 {
+      color: #222;
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 32px;
+    }
+    p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .summary {
+      margin: 25px 0 30px 0;
+      padding: 20px;
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 12px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 28px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: red;
+      transform: scale(1.03);
+    }
+    .meta {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class='card'>
+    <h1>RNA-Seq DEG Visualization Portal</h1>
+    <p>
+      This report provides an interactive volcano plot for differential expression analysis.
+      Each point includes both a unique feature ID and gene name when available.
+    </p>
+
+    <div class='summary'>
+      <p><b>Comparison:</b> Control vs ITS Comparison</p>
+      <p><b>Up-regulated:</b> <span style='color:red;'>1364</span></p>
+      <p><b>Down-regulated:</b> <span style='color:blue;'>2384</span></p>
+      <p><b>Non-significant:</b> 32228</p>
+      <p><b>Thresholds:</b> |log2FC| > 2 and adjusted P-value < 0.05</p>
+    </div>
+
+    <a class='btn' href='Control_vs_ITS_Comparison.html'>Open interactive volcano plot</a>
+
+    <div class='meta'>
+      Generated automatically by make_deg_webpage().
+    </div>
+  </div>
+</body>
+</html>

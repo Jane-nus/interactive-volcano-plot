@@ -54,7 +54,7 @@ The tool generates:
 
 ## Online demo
 
-Add your GitHub Pages link here.
+[GitHub Pages demo](https://jane-nus.github.io/interactive-volcano-plot/)
 
 ## License
 
